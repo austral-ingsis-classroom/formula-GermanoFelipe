@@ -2,7 +2,7 @@
 interface Function {
     + print(): String
     + evaluate(Map<String, Function> variables): double
-    + getVariables(): List<String>
+    + listVariables(): List<String>
 }
 
 class Value implements Function{
