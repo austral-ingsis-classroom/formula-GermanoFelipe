@@ -20,31 +20,31 @@ public class CalculateVisitor implements Visitor<Double>{
 
   @Override
   public Double visitSubtract(Subtract subtract) {
-    return null;
+    return subtract.getFunction1().accept(this) - subtract.getFunction2().accept(this);
   }
 
   @Override
   public Double visitMultiplication(Multiplication multiplication) {
-    return null;
+    return multiplication.getFunction1().accept(this) * multiplication.getFunction2().accept(this);
   }
 
   @Override
   public Double visitDivision(Division division) {
-    return null;
+    return division.getFunction1().accept(this) / division.getFunction2().accept(this);
   }
 
   @Override
   public Double visitSquareRoot(SquareRoot squareRoot) {
-    return null;
+    return Math.sqrt(squareRoot.getFunction().accept(this));
   }
 
   @Override
   public Double visitPower(Power power) {
-    return null;
+    return Math.pow(power.getFunction1().accept(this), power.getFunction2().accept(this));
   }
 
   @Override
   public Double visitAbsolut(Absolut absolut) {
-    return null;
+    return Math.abs(absolut.getFunction().accept(this));
   }
 }

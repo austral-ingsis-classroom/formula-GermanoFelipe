@@ -1,48 +1,71 @@
 @startuml
 
 interface Function {
-    + accept(Visitor)
+    + <E> E accept(Visitor<E> visitor)
 }
 
 class Value implements Function{
-    value: double
+    - value: double
+    + getValue(): double
+    + accept(Visitor<E> visitor): E
 }
 
 class Variable implements Function{
-    variable: string
+    - name: string
+    + getName(): string
+    + accept(Visitor<E> visitor): E
 }
 
 class Addition implements Function{
-    function1: Function
-    function2: Function
+    - function1: Function
+    - function2: Function
+    + getFunction1(): Function
+    + getFunction2(): Function
+    + accept(Visitor<E> visitor): E
 }
 
 class Subtract implements Function{
-    function1: Function
-    function2: Function
+    - function1: Function
+    - function2: Function
+    + getFunction1(): Function
+    + getFunction2(): Function
+    + accept(Visitor<E> visitor): E
 }
 
 class Multiplication implements Function{
-    function1: Function
-    function2: Function
+    - function1: Function
+    - function2: Function
+    + getFunction1(): Function
+    + getFunction2(): Function
+    + accept(Visitor<E> visitor): E
 }
 
 class Division implements Function{
-    function1: Function
-    function2: Function
+    - function1: Function
+    - function2: Function
+    + getFunction1(): Function
+    + getFunction2(): Function
+    + accept(Visitor<E> visitor): E
 }
 
 class SquareRoot implements Function{
-    function1: Function
+    - function1: Function
+    + getFunction(): Function
+    + accept(Visitor<E> visitor): E
 }
 
 class Power implements Function{
-    function1: Function
-    function2: Function
+    - function1: Function
+    - function2: Function
+    + getFunction1(): Function
+    + getFunction2(): Function
+    + accept(Visitor<E> visitor): E
 }
 
 class Absolute implements Function{
-    function1: Function
+    - function1: Function
+    + getFunction(): Function
+    + accept(Visitor<E> visitor): E
 }
 
 interface Visitor{
