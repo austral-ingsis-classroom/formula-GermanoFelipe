@@ -2,7 +2,7 @@ package edu.austral.ingsis.math;
 
 import edu.austral.ingsis.math.Visitor.Visitor;
 
-public class Value implements Function{
+public class Value implements Function {
 
   private final double value;
 

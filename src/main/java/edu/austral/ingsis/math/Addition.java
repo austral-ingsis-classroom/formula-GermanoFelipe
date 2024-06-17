@@ -2,7 +2,7 @@ package edu.austral.ingsis.math;
 
 import edu.austral.ingsis.math.Visitor.Visitor;
 
-public class Addition implements Function{
+public class Addition implements Function {
 
   private final Function function1;
   private final Function function2;

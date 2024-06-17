@@ -1,13 +1,13 @@
 package edu.austral.ingsis.math.Visitor;
 
 import edu.austral.ingsis.math.*;
-
 import java.util.ArrayList;
 import java.util.List;
 
-public class VariableVisitor implements Visitor<List<String>>{
+public class VariableVisitor implements Visitor<List<String>> {
 
   private final List<String> variables = new ArrayList<>();
+
   @Override
   public List<String> visitValue(Value value) {
     return variables;

@@ -2,7 +2,7 @@ package edu.austral.ingsis.math.Visitor;
 
 import edu.austral.ingsis.math.*;
 
-public class CalculateVisitor implements Visitor<Double>{
+public class CalculateVisitor implements Visitor<Double> {
   @Override
   public Double visitValue(Value value) {
     return value.getValue();

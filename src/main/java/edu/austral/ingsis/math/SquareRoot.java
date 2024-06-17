@@ -2,7 +2,7 @@ package edu.austral.ingsis.math;
 
 import edu.austral.ingsis.math.Visitor.Visitor;
 
-public class SquareRoot implements Function{
+public class SquareRoot implements Function {
   private final Function function1;
 
   public SquareRoot(Function function1) {

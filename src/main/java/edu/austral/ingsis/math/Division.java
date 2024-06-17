@@ -2,7 +2,7 @@ package edu.austral.ingsis.math;
 
 import edu.austral.ingsis.math.Visitor.Visitor;
 
-public class Division implements Function{
+public class Division implements Function {
   private final Function function1;
   private final Function function2;
 

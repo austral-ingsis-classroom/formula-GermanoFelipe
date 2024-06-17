@@ -2,7 +2,7 @@ package edu.austral.ingsis.math;
 
 import edu.austral.ingsis.math.Visitor.Visitor;
 
-public class Variable implements Function{
+public class Variable implements Function {
 
   private final String name;
 
