@@ -1,7 +1,6 @@
 package edu.austral.ingsis.math.Visitor;
 
 import edu.austral.ingsis.math.*;
-
 import java.util.Map;
 
 public class CalculateWithVariableVisitor implements Visitor<Double> {
@@ -11,6 +10,7 @@ public class CalculateWithVariableVisitor implements Visitor<Double> {
   public CalculateWithVariableVisitor(Map<String, Value> variables) {
     this.variables = variables;
   }
+
   @Override
   public Double visitValue(Value value) {
     return value.getValue();
@@ -20,7 +20,7 @@ public class CalculateWithVariableVisitor implements Visitor<Double> {
   public Double visitVariable(Variable variable) {
     if (variables.containsKey(variable.getName())) {
       return variables.get(variable.getName()).getValue();
-    }else {
+    } else {
       throw new IllegalArgumentException("Variable" + variable.getName() + "not found");
     }
   }

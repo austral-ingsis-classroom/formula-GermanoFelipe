@@ -5,7 +5,6 @@ import static org.hamcrest.Matchers.containsInAnyOrder;
 import static org.hamcrest.Matchers.empty;
 
 import edu.austral.ingsis.math.Visitor.VariableVisitor;
-import java.util.Collections;
 import java.util.List;
 import org.junit.jupiter.api.Test;
 
@@ -92,7 +91,7 @@ public class ListVariablesTest {
   }
 
   @Test
-  public void shouldListVariablesFUnction9(){
+  public void shouldListVariablesFUnction9() {
     final SquareRoot squareRoot = new SquareRoot(new Value(25));
     final List<String> result = listVisitor.visitSquareRoot(squareRoot);
 

@@ -76,7 +76,8 @@ public class PrintTest {
   @Test
   public void shouldPrintFunction8() {
     final String expected = "((5.0 - i) * 8.0)";
-    Function function = new Multiplication(new Subtract(new Value(5), new Variable("i")), new Value(8));
+    Function function =
+        new Multiplication(new Subtract(new Value(5), new Variable("i")), new Value(8));
     final String result = printVisitor.visitMultiplication((Multiplication) function);
 
     assertThat(result, equalTo(expected));

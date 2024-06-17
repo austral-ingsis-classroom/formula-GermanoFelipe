@@ -5,9 +5,8 @@ import static org.hamcrest.MatcherAssert.assertThat;
 
 import edu.austral.ingsis.math.Visitor.CalculateWithVariableVisitor;
 import edu.austral.ingsis.math.Visitor.VariableVisitor;
-import org.junit.jupiter.api.Test;
-
 import java.util.Map;
+import org.junit.jupiter.api.Test;
 
 public class ResolutionWithVariablesTest {
 
@@ -45,8 +44,7 @@ public class ResolutionWithVariablesTest {
   @Test
   public void shouldResolveFunction3() {
     final Multiplication multiplication =
-        new Multiplication(
-            new Division(new Value(9), new Variable("x")), new Variable("y"));
+        new Multiplication(new Division(new Value(9), new Variable("x")), new Variable("y"));
     final Double result = calculateWithVariableVisitor.visitMultiplication(multiplication);
 
     assertThat(result, equalTo(12.0));
@@ -56,8 +54,7 @@ public class ResolutionWithVariablesTest {
   @Test
   public void shouldResolveFunction4() {
     final Power power =
-        new Power(
-            new Division(new Value(27), new Variable("a")), new Variable("b"));
+        new Power(new Division(new Value(27), new Variable("a")), new Variable("b"));
     final Double result = calculateWithVariableVisitor.visitPower(power);
 
     assertThat(result, equalTo(27.0));

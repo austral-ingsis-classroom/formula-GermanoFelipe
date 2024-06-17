@@ -10,9 +10,7 @@ public class ResolutionTest {
 
   final CalculateVisitor calculateVisitor = new CalculateVisitor();
 
-  /**
-   * Case 1 + 6
-   */
+  /** Case 1 + 6 */
   @Test
   public void shouldResolveSimpleFunction1() {
     Addition addition = new Addition(new Value(1), new Value(6));
@@ -21,9 +19,7 @@ public class ResolutionTest {
     assertThat(result, equalTo(7.0));
   }
 
-  /**
-   * Case 12 / 2
-   */
+  /** Case 12 / 2 */
   @Test
   public void shouldResolveSimpleFunction2() {
     Division division = new Division(new Value(12), new Value(2));
@@ -32,21 +28,17 @@ public class ResolutionTest {
     assertThat(result, equalTo(6.0));
   }
 
-  /**
-   * Case (9 / 2) * 3
-   */
+  /** Case (9 / 2) * 3 */
   @Test
   public void shouldResolveSimpleFunction3() {
     Multiplication multiplication =
-            new Multiplication(new Division(new Value(9), new Value(2)), new Value(3));
+        new Multiplication(new Division(new Value(9), new Value(2)), new Value(3));
     final Double result = multiplication.accept(calculateVisitor);
 
     assertThat(result, equalTo(13.5));
   }
 
-  /**
-   * Case (27 / 6) ^ 2
-   */
+  /** Case (27 / 6) ^ 2 */
   @Test
   public void shouldResolveSimpleFunction4() {
     Power power = new Power(new Division(new Value(27), new Value(6)), new Value(2));
@@ -55,9 +47,7 @@ public class ResolutionTest {
     assertThat(result, equalTo(20.25));
   }
 
-  /**
-   * Case 36 ^ (1/2)
-   */
+  /** Case 36 ^ (1/2) */
   @Test
   public void shouldResolveSimpleFunction5() {
     Power power = new Power(new Value(36), new Division(new Value(1), new Value(2)));
@@ -66,9 +56,7 @@ public class ResolutionTest {
     assertThat(result, equalTo(6.0));
   }
 
-  /**
-   * Case |136|
-   */
+  /** Case |136| */
   @Test
   public void shouldResolveSimpleFunction6() {
     Absolut absolute = new Absolut(new Value(136));
@@ -77,9 +65,7 @@ public class ResolutionTest {
     assertThat(result, equalTo(136.0));
   }
 
-  /**
-   * Case |-136|
-   */
+  /** Case |-136| */
   @Test
   public void shouldResolveSimpleFunction7() {
     Absolut absolute = new Absolut(new Value(-136));
@@ -88,9 +74,7 @@ public class ResolutionTest {
     assertThat(result, equalTo(136.0));
   }
 
-  /**
-   * Case (5 - 5) * 8
-   */
+  /** Case (5 - 5) * 8 */
   @Test
   public void shouldResolveSimpleFunction8() {
     Subtract subtract = new Subtract(new Value(5), new Value(5));
@@ -100,9 +84,7 @@ public class ResolutionTest {
     assertThat(result, equalTo(0.0));
   }
 
-  /**
-   * Case sqrt(25)
-   */
+  /** Case sqrt(25) */
   @Test
   public void shouldResolveSimpleFunction9() {
     SquareRoot squareRoot = new SquareRoot(new Value(25));
