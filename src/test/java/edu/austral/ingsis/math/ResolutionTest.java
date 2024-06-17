@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test;
 
 public class ResolutionTest {
 
-  CalculateVisitor calculateVisitor = new CalculateVisitor();
+  final CalculateVisitor calculateVisitor = new CalculateVisitor();
 
   /** Case 1 + 6 */
   @Test

@@ -3,9 +3,12 @@ package edu.austral.ingsis.math;
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.MatcherAssert.assertThat;
 
+import edu.austral.ingsis.math.Visitor.VariableVisitor;
 import org.junit.jupiter.api.Test;
 
 public class ResolutionWithVariablesTest {
+
+  final VariableVisitor variableVisitor = new VariableVisitor();
 
   /** Case 1 + x where x = 3 */
   @Test

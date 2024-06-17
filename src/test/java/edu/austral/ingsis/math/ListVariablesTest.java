@@ -11,7 +11,7 @@ import org.junit.jupiter.api.Test;
 
 public class ListVariablesTest {
 
-  VariableVisitor listVisitor = new VariableVisitor();
+  final VariableVisitor listVisitor = new VariableVisitor();
 
   /** Case 1 + 6 */
   @Test

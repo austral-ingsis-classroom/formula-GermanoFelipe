@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test;
 
 public class PrintTest {
 
-  PrintVisitor printVisitor = new PrintVisitor();
+  final PrintVisitor printVisitor = new PrintVisitor();
 
   /** Case 1 + 6 */
   @Test
