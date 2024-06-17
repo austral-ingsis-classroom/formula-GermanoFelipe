@@ -94,6 +94,10 @@ class VariableVisitor implements Visitor{
     + getVariables(Function): List<String>
 }
 
+class CalculateWhitVariableVisitor implements Visitor{
+    + calculate(Map<String, Double>): Double
+}
+
 @enduml
 class Negate implements Function{
     value: Function
