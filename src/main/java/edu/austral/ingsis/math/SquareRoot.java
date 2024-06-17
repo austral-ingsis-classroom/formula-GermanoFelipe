@@ -9,7 +9,7 @@ public class SquareRoot implements Function{
     this.function1 = function1;
   }
 
-  public Function getValue() {
+  public Function getFunction() {
     return function1;
   }
 

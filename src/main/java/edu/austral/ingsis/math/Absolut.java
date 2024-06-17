@@ -9,7 +9,7 @@ public class Absolut implements Function{
     this.function1 = function1;
   }
 
-  public Function getFunction1() {
+  public Function getFunction() {
     return function1;
   }
 
