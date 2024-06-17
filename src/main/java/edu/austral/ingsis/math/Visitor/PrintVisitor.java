@@ -5,7 +5,7 @@ import edu.austral.ingsis.math.*;
 public class PrintVisitor implements Visitor<String>{
   @Override
   public String visitValue(Value value) {
-    return String.valueOf( (int) value.getValue());
+    return String.valueOf(value.getValue());
   }
 
   @Override

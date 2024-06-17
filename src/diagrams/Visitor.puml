@@ -69,28 +69,29 @@ class Absolute implements Function{
 }
 
 interface Visitor{
-    + visit(Absolute)
-    + visit(Addition)
-    + visit(Division)
-    + visit(Multiplication)
-    + visit(SquareRoot)
-    + visit(Subtraction)
-    + visit(Value)
-    + visit(Variable)
+    + visitValue(Value): E
+    + visitVariable(Variable): E
+    + visitAddition(Addition): E
+    + visitSubtract(Subtract): E
+    + visitMultiplication(Multiplication): E
+    + visitDivision(Division): E
+    + visitSquareRoot(SquareRoot): E
+    + visitPower(Power): E
+    + visitAbsolute(Absolute): E
 }
 
 Function -> Visitor
 
 class PrintVisitor implements Visitor{
-    + print(Function)
+    + print(Function): String
 }
 
 class CalculateVisitor implements Visitor{
-    + evaluate(Function)
+    + calculate(Function): Double
 }
 
 class VariableVisitor implements Visitor{
-    + getVariables(Function)
+    + getVariables(Function): List<String>
 }
 
 @enduml
