@@ -24,7 +24,9 @@ public class ListVariablesTest {
   /** Case 12 / div */
   @Test
   public void shouldListVariablesFunction2() {
-    final List<String> result = Collections.emptyList();
+    final Division div = new Division(new Value(12), new Variable("div"));
+    VariableVisitor listVisitor = new VariableVisitor();
+    final List<String> result = listVisitor.visitDivision(div);
 
     assertThat(result, containsInAnyOrder("div"));
   }
