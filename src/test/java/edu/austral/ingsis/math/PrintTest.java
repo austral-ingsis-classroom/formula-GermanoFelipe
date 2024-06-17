@@ -81,4 +81,14 @@ public class PrintTest {
 
     assertThat(result, equalTo(expected));
   }
+
+  /** Case sqrt(36) */
+  @Test
+  public void shouldPrintFunction9() {
+    final String expected = "sqrt(36.0)";
+    Function function = new SquareRoot(new Value(36));
+    final String result = printVisitor.visitSquareRoot((SquareRoot) function);
+
+    assertThat(result, equalTo(expected));
+  }
 }
