@@ -9,4 +9,16 @@ public interface Visitor<E>{
   E visitVariable(Variable variable);
 
   E visitAddition(Addition addition);
+
+  E visitSubtract(Subtract subtract);
+
+  E visitMultiplication(Multiplication multiplication);
+
+  E visitDivision(Division division);
+
+  E visitSquareRoot(SquareRoot squareRoot);
+
+  E visitPower(Power power);
+
+  E visitAbsolut(Absolut absolut);
 }
